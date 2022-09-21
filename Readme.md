@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Елена Ивашнева](https://up.htmlacademy.ru/htmlcss/35/user/2107255).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Артёмов](https://htmlacademy.ru/profile/firefoxic).
 
 ---
 
