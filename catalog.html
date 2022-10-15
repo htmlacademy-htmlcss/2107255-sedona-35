@@ -53,7 +53,7 @@
 				<header class="content-header">
 					<h1 class="content-title">Гостиницы Седоны</h1>
 
-					<ul class="breadcrubs">
+					<ul class="breadcrubs reset-list">
 						<li class="breadcrubs-item">
 							<a class="breadcrubs-link" href="./index.html">
 								<span class="visually-hidden">Главная</span>
@@ -66,13 +66,13 @@
 				</header>
 
 				<section class="content-filter">
-					<h2 class="visually-hidden">Фильтр по гостиницам</h2>
+					<h2 class="visually-hidden" hidden>Фильтр по гостиницам</h2>
 
-					<form  class="filter" action="https://echo.htmlacademy.ru/" method="get">
+					<form class="filter" action="https://echo.htmlacademy.ru/" method="get">
 						<fieldset class="filter-parameter">
 							<legend class="filter-parameter-name">Инфраструктура:</legend>
 
-							<ul class="filter-values">
+							<ul class="filter-values reset-list">
 								<li class="filter-value">
 									<label class="filter-value-label">
 										<input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="swimming-pool" checked>
@@ -97,7 +97,7 @@
 						<fieldset class="filter-parameter">
 							<legend class="filter-parameter-name">Тип жилья:</legend>
 
-							<ul class="filter-values">
+							<ul class="filter-values reset-list">
 								<li class="filter-value">
 									<label class="filter-value-label">
 										<input class="filter-input filter-radio" type="radio" name="accommodation" value="hotel" checked>
@@ -123,13 +123,13 @@
 							<legend class="filter-parameter-name">Стоимость, ₽:</legend>
 
 							<div class="filter-range-slider">
-								<label class="visually-hidden" for="filter-price-from">От</label>
+								<label class="visually-hidden" for="filter-price-from" hidden>От</label>
 								<input class="range-slider-input text-field" type="text" name="price-from-text" id="filter-price-from" placeholder="от">
-								<label class="visually-hidden" for="filter-price-to">до</label>
+								<label class="visually-hidden" for="filter-price-to" hidden>до</label>
 								<input class="range-slider-input text-field" type="text" name="price-to-text" id="filter-price-to" placeholder="до">
 
 								<input class="range-slider-handler" type="range" name="price-from-handler" min="0" max="9000" step="5" value="0">
-								<input class="range-slider-handler" type="range" name="price-to-handler" min="0" max="9000"  step="5" value="9000">
+								<input class="range-slider-handler" type="range" name="price-to-handler" min="0" max="9000" step="5" value="9000">
 								<output class="range-slider-output" name="price-from-output">0</output>
 								<output class="range-slider-output" name="price-to-output">9000</output>
 							</div>
@@ -145,14 +145,14 @@
 
 			<section class="hotels">
 				<div class="hotels-view-container">
-					<h2 class="section-title">Найдено гостиниц: <span class="hotels-number">38</span></h2>
+					<h2 class="hotels-title section-title">Найдено гостиниц: <span class="hotels-number">38</span></h2>
 
 					<select class="hotels-sort text-grey" name="sorting" aria-label="Сортировка">
 						<option value="cheap">Сначала дешевые</option>
 						<option value="expensive">Сначала дорогие</option>
 					</select>
 
-					<ul class="hotels-view-list">
+					<ul class="hotels-view-list reset-list">
 						<li class="hotels-view-item">
 							<a class="hotels-view-button button-link" href="javascript:void(0)" aria-current="page">
 								<span class="visually-hidden">Вид Плитка</span>
@@ -171,7 +171,7 @@
 					</ul>
 				</div>
 
-				<ul class="hotels-cards">
+				<ul class="hotels-cards reset-list">
 					<li class="hotel-card">
 						<a class="hotel-more" href="javascript:void(0)">
 							<h3 class="block-title hotel-title">Amara Resort & Spa</h3>
@@ -241,7 +241,7 @@
 					</li>
 				</ul>
 
-				<ul class="hotels-pagination">
+				<ul class="hotels-pagination reset-list">
 					<li class="hotels-pagination-item">
 						<a class="hotels-pagination-link button button-blue button-big" href="./catalog.html" aria-current="page">1</a>
 					</li>
@@ -255,7 +255,7 @@
 						<a class="hotels-pagination-link button button-blue button-big" href="javascript:void(0)">4</a>
 					</li>
 					<li class="hotels-pagination-item">
-						...
+						<a class="hotels-pagination-link">...</a>
 					</li>
 					<li class="hotels-pagination-item">
 						<a class="hotels-pagination-link button button-blue button-big" href="javascript:void(0)">10</a>
@@ -264,7 +264,7 @@
 			</section>
 
 			<section class="subscribe subscribe-theme-light">
-				<div class="text-center">
+				<div class="subscribe-content text-center">
 					<h2 class="section-title">Подпишитесь на рассылку</h2>
 					<p class="text-grey">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
 
