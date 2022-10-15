@@ -212,6 +212,11 @@ img {
 
 /* Advantages */
 
+.advantages-item {
+	width: 400px;
+	min-height: 384px;
+}
+
 .advantages-item-line:nth-child(even) {
 	background-color: rgba(131, 179, 211, 0.12);
 }
@@ -221,6 +226,8 @@ img {
 }
 
 .advantages-item-line.text-white {
+	width: 100%;
+
 	background-color: #82b3d3;
 }
 
@@ -232,6 +239,13 @@ img {
 	width: 230px;
 }
 
+/* Hotels Search */
+
+.hotels-search-content {
+	width: 592px;
+	margin: 0 auto;
+}
+
 /* Subscribe */
 
 .subscribe {
@@ -241,6 +255,11 @@ img {
 	background-image: url("../images/subscribe-background.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
+}
+
+.subscribe-content {
+	width: 684px;
+	margin: 0 auto;
 }
 
 .subscribe-form-field::placeholder {
@@ -345,11 +364,23 @@ img {
 
 /* Footer */
 
+.page-footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 70px;
+}
+
+.socials-list {
+	display: flex;
+}
+
 .socials-link {
 	text-decoration: none;
 }
 
 .contacts {
+	max-width: 720px;
+
 	font-style: normal;
 }
 
