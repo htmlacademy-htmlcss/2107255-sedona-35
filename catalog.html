@@ -19,13 +19,13 @@
 			<nav class="main-navigation">
 				<ul class="site-navigation reset-list">
 					<li class="site-navigation-item">
-						<a class="site-navigation-link" href="./index.html">Главная</a>
+						<a class="site-navigation-link" href="./index.html" aria-current="page">Главная</a>
 					</li>
 					<li class="site-navigation-item">
 						<a class="site-navigation-link" href="javascript:void(0)">О седоне</a>
 					</li>
 					<li class="site-navigation-item">
-						<a class="site-navigation-link" href="./catalog.html" aria-current="page">Гостиницы</a>
+						<a class="site-navigation-link" href="./catalog.html">Гостиницы</a>
 					</li>
 				</ul>
 
@@ -37,10 +37,11 @@
 					</li>
 					<li class="user-menu-item">
 						<a class="user-menu-link icon-link" href="javascript:void(0)">
-							<span class="visually-hidden">Избранное</span><span class="heart-counter">12</span>
+							<span class="visually-hidden">Избранное</span>
+							<span class="heart-counter">12</span>
 						</a>
 					</li>
-					<li class="user-menu-item">
+					<li class="user-menu-item button-item">
 						<a class="user-menu-link button" href="javascript:void(0)">Хочу сюда!</a>
 					</li>
 				</ul>
@@ -55,7 +56,7 @@
 
 					<ul class="breadcrubs reset-list">
 						<li class="breadcrubs-item">
-							<a class="breadcrubs-link" href="./index.html">
+							<a class="breadcrubs-link home-link" href="./index.html">
 								<span class="visually-hidden">Главная</span>
 							</a>
 						</li>
@@ -66,7 +67,7 @@
 				</header>
 
 				<section class="content-filter">
-					<h2 class="visually-hidden" hidden>Фильтр по гостиницам</h2>
+					<h2 class="visually-hidden">Фильтр по гостиницам</h2>
 
 					<form class="filter" action="https://echo.htmlacademy.ru/" method="get">
 						<fieldset class="filter-parameter">
@@ -74,19 +75,19 @@
 
 							<ul class="filter-values reset-list">
 								<li class="filter-value">
-									<label class="filter-value-label">
+									<label>
 										<input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="swimming-pool" checked>
 										Бассейн
 									</label>
 								</li>
 								<li class="filter-value">
-									<label class="filter-value-label">
+									<label>
 										<input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="parking" checked>
 										Парковка
 									</label>
 								</li>
 								<li class="filter-value">
-									<label class="filter-value-label">
+									<label>
 										<input class="filter-input filter-checkbox" type="checkbox" name="infrastructure" value="wi-fi">
 										Wi-Fi
 									</label>
@@ -99,19 +100,19 @@
 
 							<ul class="filter-values reset-list">
 								<li class="filter-value">
-									<label class="filter-value-label">
+									<label>
 										<input class="filter-input filter-radio" type="radio" name="accommodation" value="hotel" checked>
 										Гостиница
 									</label>
 								</li>
 								<li class="filter-value">
-									<label class="filter-value-label">
+									<label>
 										<input class="filter-input filter-radio" type="radio" name="accommodation" value="motel">
 										Мотель
 									</label>
 								</li>
 								<li class="filter-value">
-									<label class="filter-value-label">
+									<label>
 										<input class="filter-input filter-radio" type="radio" name="accommodation" value="apartments">
 										Апартаменты
 									</label>
@@ -123,9 +124,9 @@
 							<legend class="filter-parameter-name">Стоимость, ₽:</legend>
 
 							<div class="filter-range-slider">
-								<label class="visually-hidden" for="filter-price-from" hidden>От</label>
+								<label class="visually-hidden" for="filter-price-from">От</label>
 								<input class="range-slider-input text-field" type="text" name="price-from-text" id="filter-price-from" placeholder="от">
-								<label class="visually-hidden" for="filter-price-to" hidden>до</label>
+								<label class="visually-hidden" for="filter-price-to">до</label>
 								<input class="range-slider-input text-field" type="text" name="price-to-text" id="filter-price-to" placeholder="до">
 
 								<input class="range-slider-handler" type="range" name="price-from-handler" min="0" max="9000" step="5" value="0">
@@ -150,6 +151,7 @@
 					<select class="hotels-sort text-grey" name="sorting" aria-label="Сортировка">
 						<option value="cheap">Сначала дешевые</option>
 						<option value="expensive">Сначала дорогие</option>
+						<option value="popular">Сначала популярные</option>
 					</select>
 
 					<ul class="hotels-view-list reset-list">
@@ -263,46 +265,48 @@
 				</ul>
 			</section>
 
-			<section class="subscribe subscribe-theme-light">
-				<div class="subscribe-content text-center">
+			<section class="subscribe subscribe-theme-light text-center">
+				<div class="subscribe-text">
 					<h2 class="section-title">Подпишитесь на рассылку</h2>
-					<p class="text-grey">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
-
-					<form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-						<label class="visually-hidden" for="subscribe-email">Ваш e-mail:</label>
-						<input class="subscribe-form-field text-field" type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" required>
-						<button class="button button-blue button-big button-not-link" type="submit">Подписаться</button>
-					</form>
+					<p class="section-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
 				</div>
+
+				<form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+					<label class="visually-hidden" for="subscribe-email">Ваш e-mail:</label>
+					<input class="subscribe-form-field text-field" type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" required>
+					<button class="button button-blue button-big button-not-link" type="submit">Подписаться</button>
+				</form>
 			</section>
 		</main>
 
 		<footer class="page-footer">
-			<ul class="socials-list reset-list">
-				<li class="socials-item">
-					<a class="socials-link" href="https://vk.com/htmlacademy" target="_blank">
-						<span class="visually-hidden">VKontakte</span>
-					</a>
-				</li>
-				<li class="socials-item">
-					<a class="socials-link" href="https://t.me/htmlacademy" target="_blank">
-						<span class="visually-hidden">Telegram</span>
-					</a>
-				</li>
-				<li class="socials-item">
-					<a class="socials-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
-						<span class="visually-hidden">YouTube</span>
-					</a>
-				</li>
-			</ul>
+			<div class="page-footer-container">
+				<ul class="socials-list reset-list">
+					<li class="socials-item">
+						<a class="socials-link" href="https://vk.com/htmlacademy" target="_blank">
+							<span class="visually-hidden">VKontakte</span>
+						</a>
+					</li>
+					<li class="socials-item">
+						<a class="socials-link" href="https://t.me/htmlacademy" target="_blank">
+							<span class="visually-hidden">Telegram</span>
+						</a>
+					</li>
+					<li class="socials-item">
+						<a class="socials-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+							<span class="visually-hidden">YouTube</span>
+						</a>
+					</li>
+				</ul>
 
-			<address class="contacts text-center">
-				<a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-			</address>
+				<address class="contacts text-center">
+					<a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+				</address>
 
-			<a class="logo-htmlacademy" href="https://htmlacademy.ru/" target="_blank">
-				<span class="visually-hidden">.html academy</span>
-			</a>
+				<a class="logo-htmlacademy" href="https://htmlacademy.ru/" target="_blank">
+					<span class="visually-hidden">.html academy</span>
+				</a>
+			</div>
 		</footer>
 
 	</div>
