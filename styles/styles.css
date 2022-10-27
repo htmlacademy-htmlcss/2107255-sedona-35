@@ -186,14 +186,12 @@ img {
 /* Footer */
 
 .page-footer {
-	padding: 40px 70px 30px;
-}
-
-.page-footer-container {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	min-height: 50px;
+	box-sizing: border-box;
+	min-height: 120px;
+	padding: 40px 70px 30px;
 }
 
 .socials-list {
@@ -408,6 +406,11 @@ img {
 .subscribe-text {
 	width: 475px;
 	margin: 0 auto 54px;
+}
+
+.subscribe-form {
+	display: flex;
+	justify-content: center;
 }
 
 .subscribe-form-field::placeholder {
