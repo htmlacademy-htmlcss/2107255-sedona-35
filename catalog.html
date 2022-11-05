@@ -11,38 +11,38 @@
 <body>
 	<div class="page">
 
-		<header class="page-header">
+		<header class="page-header section-container">
 			<a class="logo-link" href="./index.html">
 				<img class="logo" src="./images/logo.svg" width="140" height="71" alt="Логотип сайта «City of Sedona».">
 			</a>
 
 			<nav class="main-navigation">
 				<ul class="site-navigation reset-list">
-					<li class="site-navigation-item">
-						<a class="site-navigation-link" href="./index.html">Главная</a>
+					<li>
+						<a class="page-header-link site-navigation-link" href="./index.html">Главная</a>
 					</li>
-					<li class="site-navigation-item">
-						<a class="site-navigation-link" href="javascript:void(0)">О седоне</a>
+					<li>
+						<a class="page-header-link site-navigation-link" href="javascript:void(0)">О седоне</a>
 					</li>
-					<li class="site-navigation-item">
-						<a class="site-navigation-link" href="./catalog.html" aria-current="page">Гостиницы</a>
+					<li>
+						<a class="page-header-link site-navigation-link" href="./catalog.html" aria-current="page">Гостиницы</a>
 					</li>
 				</ul>
 
 				<ul class="user-menu reset-list">
-					<li class="user-menu-item">
-						<a class="user-menu-link icon-link" href="javascript:void(0)">
+					<li>
+						<a class="page-header-link user-menu-link link-search" href="javascript:void(0)">
 							<span class="visually-hidden">Поиск</span>
 						</a>
 					</li>
-					<li class="user-menu-item">
-						<a class="user-menu-link icon-link" href="javascript:void(0)">
+					<li>
+						<a class="page-header-link user-menu-link link-heart" href="javascript:void(0)">
 							<span class="visually-hidden">Избранное</span>
 							<span class="heart-counter">12</span>
 						</a>
 					</li>
-					<li class="user-menu-item button-item">
-						<a class="user-menu-link button" href="javascript:void(0)">Хочу сюда!</a>
+					<li class="button-item">
+						<a class="button button-brown" href="javascript:void(0)">Хочу сюда!</a>
 					</li>
 				</ul>
 			</nav>
@@ -274,43 +274,43 @@
 			</section>
 
 			<section class="subscribe subscribe-theme-light">
-				<div class="subscribe-text text-center">
+				<div class="subscribe-container text-center">
 					<h2 class="section-title">Подпишитесь на рассылку</h2>
 					<p class="section-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-				</div>
 
-				<form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-					<label class="visually-hidden" for="subscribe-email">Ваш e-mail:</label>
-					<input class="subscribe-form-field text-field" type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" required>
-					<button class="button button-blue button-big button-not-link" type="submit">Подписаться</button>
-				</form>
+					<form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+						<label class="visually-hidden" for="subscribe-email">Ваш e-mail:</label>
+						<input class="subscribe-form-field text-field" type="email" name="subscribe-email" id="subscribe-email" placeholder="Ваш e-mail" required>
+						<button class="button button-blue button-big" type="submit">Подписаться</button>
+					</form>
+				</div>
 			</section>
 		</main>
 
-		<footer class="page-footer">
+		<footer class="page-footer section-container">
 			<ul class="socials-list reset-list">
-				<li class="socials-item">
-					<a class="socials-link" href="https://vk.com/htmlacademy" target="_blank">
+				<li>
+					<a class="socials-link socials-link-vkontakte" href="https://vk.com/htmlacademy" target="_blank">
 						<span class="visually-hidden">VKontakte</span>
 					</a>
 				</li>
-				<li class="socials-item">
-					<a class="socials-link" href="https://t.me/htmlacademy" target="_blank">
+				<li>
+					<a class="socials-link socials-link-telegram" href="https://t.me/htmlacademy" target="_blank">
 						<span class="visually-hidden">Telegram</span>
 					</a>
 				</li>
-				<li class="socials-item">
-					<a class="socials-link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+				<li>
+					<a class="socials-link socials-link-youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
 						<span class="visually-hidden">YouTube</span>
 					</a>
 				</li>
 			</ul>
 
 			<address class="contacts text-center">
-				<a class="phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+				<a class="page-header-link phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
 			</address>
 
-			<a class="logo-htmlacademy" href="https://htmlacademy.ru/" target="_blank">
+			<a class="page-header-link logo-htmlacademy" href="https://htmlacademy.ru/" target="_blank">
 				<span class="visually-hidden">.html academy</span>
 			</a>
 		</footer>
