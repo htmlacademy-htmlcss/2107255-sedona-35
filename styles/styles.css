@@ -422,12 +422,31 @@ img {
 /* Inputs */
 
 .text-field {
+	box-sizing: border-box;
+	padding: 0;
+
 	font-family: inherit;
 	font-size: 18px;
 	line-height: 24px;
+	color: #000000;
 
 	background-color: #f2f2f2;
 	border: 0;
+	border-radius: 4px;
+}
+
+.text-field:hover {
+	background-color: #e6e6e6;
+}
+
+.text-field:focus {
+	background-color: #e6e6e6;
+	outline: 3px solid #83b3d3;
+}
+
+.text-field:active {
+	background-color: #f2f2f2;
+	border: 2px solid #000000;
 }
 
 /* Headings and Texts */
@@ -649,6 +668,14 @@ img {
 
 .subscribe-form-field {
 	flex-grow: 1;
+	height: 52px;
+	padding: 0 20px;
+
+	border-radius: 4px 0 0 4px;
+}
+
+.subscribe-form-field:focus {
+	border-radius: 4px;
 }
 
 .subscribe-form-field::placeholder {
@@ -657,6 +684,16 @@ img {
 
 .subscribe-form-button {
 	border-radius: 0 4px 4px 0;
+}
+
+.subscribe-form-button:focus-visible {
+	border-radius: 4px;
+}
+
+@supports not selector(:focus-visible) {
+	.subscribe-form-button:focus {
+		border-radius: 4px;
+	}
 }
 
 
@@ -1043,6 +1080,10 @@ img {
 	content: "";
 }
 
+.hotel-stars-five::before {
+	width: 120px;
+}
+
 .hotel-stars-four::before {
 	width: 96px;
 }
@@ -1053,6 +1094,10 @@ img {
 
 .hotel-stars-two::before {
 	width: 48px;
+}
+
+.hotel-stars-one::before {
+	width: 24px;
 }
 
 .hotel-raiting {
