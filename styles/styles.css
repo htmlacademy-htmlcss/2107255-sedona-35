@@ -423,9 +423,10 @@ img {
 
 .text-field {
 	box-sizing: border-box;
-	padding: 0;
+	padding: 0 20px;
 
 	font-family: inherit;
+	font-weight: 700;
 	font-size: 18px;
 	line-height: 24px;
 	color: #000000;
@@ -440,11 +441,16 @@ img {
 }
 
 .text-field:focus {
+	position: relative;
+	z-index: 1;
+
 	background-color: #e6e6e6;
 	outline: 3px solid #83b3d3;
 }
 
 .text-field:active {
+	padding: 0 18px;
+
 	background-color: #f2f2f2;
 	border: 2px solid #000000;
 }
@@ -669,7 +675,8 @@ img {
 .subscribe-form-field {
 	flex-grow: 1;
 	height: 52px;
-	padding: 0 20px;
+
+	font-weight: 400;
 
 	border-radius: 4px 0 0 4px;
 }
@@ -835,19 +842,172 @@ img {
 	margin-bottom: 0;
 }
 
-.filter-input {
-	margin: 0;
+.filter-input-label {
+	display: flex;
+	align-items: center;
+	width: max-content;
 }
 
-.range-slider-input::placeholder {
-	text-align: right;
-	color: rgba(0, 0, 0, 0.3);
+.filter-input-mark {
+	width: 20px;
+	height: 20px;
+	margin-right: 16px;
+
+	background-color: #ffffff;
+}
+
+.filter-checkbox-mark {
+	border-radius: 4px;
+}
+
+.filter-radio-mark {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 50%;
+}
+
+.filter-checkbox:checked + .filter-checkbox-mark::before {
+	display: block;
+	width: 20px;
+	height: 19px;
+	margin-top: 1px;
+
+	background: url("../icons/stack.svg#filter-tick") no-repeat center / contain;
+
+	content: "";
+}
+
+.filter-radio:checked + .filter-radio-mark::before {
+	width: 10px;
+	height: 10px;
+
+	background-color: #3f5e72;
+	border-radius: 50%;
+
+	content: "";
+}
+
+.filter-input-label:hover {
+	opacity: 0.6;
+}
+
+.filter-input:focus + .filter-input-mark {
+	outline: 3px solid #83b3d3;
+}
+
+.filter-input-label:active {
+	opacity: 0.3;
 }
 
 .filter-buttons {
 	display: grid;
 	row-gap: 32px;
 	align-self: end;
+}
+
+/* Range Slider */
+
+.filter-range-slider {
+	min-height: 104px;
+}
+
+.range-slider-wrapper-fields {
+	display: grid;
+	grid-template-columns: repeat(2, 143px);
+	column-gap: 2px;
+	margin-bottom: 44px;
+}
+
+.range-slider-wrapper-field {
+	position: relative;
+}
+
+.range-slider-input {
+	width: 143px;
+	height: 48px;
+	padding-right: 45px;
+
+	appearance: textfield;
+}
+
+.range-slider-input:active {
+	padding-right: 43px;
+}
+
+.range-slider-input::-webkit-outer-spin-button,
+.range-slider-input::-webkit-inner-spin-button {
+	appearance: none;
+	margin: 0;
+}
+
+.input-from {
+	border-radius: 4px 0 0 4px;
+}
+
+.input-to {
+	border-radius: 0 4px 4px 0;
+}
+
+.range-slider-label {
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	z-index: 2;
+
+	font-size: 18px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.3);
+
+	transform: translateY(-50%);
+}
+
+.range-slider-scale {
+	position: relative;
+
+	width: 286px;
+	height: 4px;
+	margin: 0 auto;
+
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-slider-bar {
+	position: absolute;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 4px;
+
+	background-color: #ffffff;
+}
+
+.range-slider-handler {
+	width: 20px;
+	height: 20px;
+	padding: 0;
+
+	background-color: #ffffff;
+	border: 0;
+	border-radius: 5px;
+
+	cursor: pointer;
+}
+
+.range-slider-handler:hover {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-slider-handler:focus {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+	outline: 3px solid #83b3d3;
+}
+
+.range-slider-handler:active {
+	box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
+	outline: 2px solid #83b3d3;
 }
 
 /* Hotels */
@@ -870,16 +1030,44 @@ img {
 	margin-bottom: 0;
 }
 
-.hotels-sort {
+.hotels-sorting {
 	box-sizing: border-box;
 	width: 292px;
-	height: 49px;
 	margin: 0 70px;
+	padding: 12px 18px;
+	padding-right: 48px;
 
 	font-family: inherit;
 	font-size: 18px;
 	line-height: 21px;
 	color: #333333;
+
+	background: #ffffff url("../icons/stack.svg#hotels-view-arrow") no-repeat right 17px center / 14px 13px;
+	border: 2px solid #e5e5e5;
+	border-radius: 4px;
+
+	appearance: none;
+}
+
+.hotels-sorting:hover {
+	border-color: #68a2ca;
+}
+
+.hotels-sorting:focus {
+	border-color: #68a2ca;
+	outline: none;
+}
+
+.hotels-sorting:active {
+	border-color: #3f5e72;
+}
+
+.hotels-sorting:disabled {
+	color: #000000;
+
+	border-color: #000000;
+
+	opacity: 0.3;
 }
 
 .hotels-view-list {
