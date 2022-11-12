@@ -686,7 +686,9 @@ img {
 }
 
 .subscribe-form-field::placeholder {
-	color: rgba(0, 0, 0, 0.6);
+	color: #000000;
+
+	opacity: 0.6;
 }
 
 .subscribe-form-button {
