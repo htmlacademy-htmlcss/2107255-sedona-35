@@ -436,6 +436,12 @@ img {
 	border-radius: 4px;
 }
 
+.text-field::placeholder {
+	color: #000000;
+
+	opacity: 0.6;
+}
+
 .text-field:hover {
 	background-color: #e6e6e6;
 }
@@ -683,12 +689,6 @@ img {
 
 .subscribe-form-field:focus {
 	border-radius: 4px;
-}
-
-.subscribe-form-field::placeholder {
-	color: #000000;
-
-	opacity: 0.6;
 }
 
 .subscribe-form-button {
@@ -1310,4 +1310,350 @@ img {
 
 .subscribe-theme-light {
 	background: #ffffff;
+}
+
+
+/* Modal */
+
+.modal-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	display: none;
+
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-open {
+	display: flex;
+}
+
+.modal {
+	position: relative;
+
+	padding: 64px 70px;
+
+	background-color: #ffffff;
+	border-radius: 30px;
+	box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-hotel-search {
+	width: 577px;
+}
+
+.modal-close-button {
+	position: absolute;
+	right: 52px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 52px;
+	height: 52px;
+	padding: 0;
+
+	background-color: #f2f2f2;
+	border: 0;
+	border-radius: 50%;
+
+	cursor: pointer;
+}
+
+.modal-close-button::before {
+	width: 20px;
+	height: 20px;
+
+	background: url("../icons/stack.svg#modal-close") no-repeat center / contain;
+
+	content: "";
+}
+
+.modal-close-button:hover {
+	background-color: #e6e6e6;
+}
+
+.modal-close-button:focus-visible {
+	background-color: #e6e6e6;
+	outline: 3px solid #83b3d3;
+}
+
+@supports not selector(:focus-visible) {
+	.modal-close-button:focus {
+		background-color: #e6e6e6;
+		outline: 3px solid #83b3d3;
+	}
+}
+
+.modal-close-button:active {
+	background-color: #e6e6e6;
+}
+
+.modal-close-button:active::before {
+	opacity: 0.3;
+}
+
+.modal-title {
+	max-width: 479px;
+	margin-bottom: 64px;
+}
+
+/* Modal Form */
+
+.hotel-search-form {
+	display: grid;
+	grid-template-columns: 247px 242px;
+	justify-content: space-between;
+}
+
+.hotel-search-text-group {
+	display: grid;
+	grid-template-columns: 1fr 440px;
+	row-gap: 4px;
+	grid-column: 1 / -1;
+	margin: 0;
+	margin-bottom: 6px;
+}
+
+.hotel-search-label {
+	align-self: center;
+	justify-self: start;
+
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	text-transform: capitalize;
+}
+
+.hotel-search-text {
+	width: 440px;
+	height: 48px;
+	padding-right: 60px;
+
+	background: #f2f2f2 url("../icons/stack.svg#modal-date") no-repeat right 20px center / 20px 20px;
+}
+
+.hotel-search-text:active {
+	background-position: right 18px center;
+}
+
+.hotel-search-message {
+	grid-column: 2 / 3;
+
+	min-height: 38px;
+	padding: 0 20px;
+
+	font-size: 16px;
+	line-height: 21px;
+	color: #333333;
+}
+
+.hotel-search-error {
+	color: #ff5757;
+}
+
+.hotel-search-number-group {
+	display: flex;
+}
+
+.hotel-search-number {
+	display: grid;
+	grid-template-columns: 40px 31px 40px;
+	height: 48px;
+	margin-left: auto;
+
+	background-color: #f2f2f2;
+	border-radius: 4px;
+}
+
+.hotel-search-number-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+
+	background-color: #f2f2f2;
+	border: 0;
+	border-radius: 4px;
+
+	cursor: pointer;
+}
+
+.hotel-search-number-button::before {
+	width: 20px;
+	height: 20px;
+
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+	background-color: rgba(117, 97, 87, 0.3);
+
+	content: "";
+}
+
+.number-button-minus::before {
+	mask-image: url("../icons/stack.svg#modal-minus");
+}
+
+.number-button-plus::before {
+	mask-image: url("../icons/stack.svg#modal-plus");
+}
+
+.hotel-search-number-button:hover::before {
+	background-color: #000000;
+}
+
+.hotel-search-number-button:focus-visible::before {
+	background-color: #000000;
+}
+
+@supports not selector(:focus-visible) {
+	.hotel-search-number-button:focus::before {
+		background-color: #000000;
+	}
+}
+
+.hotel-search-number-button:focus-visible {
+	z-index: 1;
+
+	outline: 3px solid #82b3d3;
+}
+
+@supports not selector(:focus-visible) {
+	.hotel-search-number-button:focus {
+		z-index: 1;
+
+		outline: 3px solid #82b3d3;
+	}
+}
+
+.hotel-search-number-button:active::before {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.hotel-search-number-input {
+	padding: 0;
+
+	text-align: center;
+
+	appearance: textfield;
+}
+
+.hotel-search-number-input::-webkit-outer-spin-button,
+.hotel-search-number-input::-webkit-inner-spin-button {
+	appearance: none;
+	margin: 0;
+}
+
+.hotel-search-number-input:active {
+	padding: 0;
+}
+
+.hotel-search-button {
+	grid-column: 1 / -1;
+	height: 60px;
+	margin-top: 48px;
+	padding: 0;
+
+	font-family: inherit;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #ffffff;
+
+	background-color: #83b3d3;
+	border: 0;
+	border-radius: 10px;
+
+	cursor: pointer;
+}
+
+.hotel-search-button:active {
+	background-color: #68a2ca;
+}
+
+/* Modal Form Tooltip */
+
+.hotel-search-label-tooltip {
+	display: flex;
+	align-self: center;
+}
+
+.hotel-search-tooltip {
+	position: relative;
+
+	width: 26px;
+	height: 26px;
+	margin-left: 10px;
+}
+
+.tooltip-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 26px;
+	height: 26px;
+	padding: 0;
+
+	background-color: #83b3d3;
+	border: 0;
+	border-radius: 50%;
+}
+
+.tooltip-toggle::before {
+	width: 20px;
+	height: 20px;
+
+	background: url("../icons/stack.svg#modal-info") no-repeat center / contain;
+
+	content: "";
+}
+
+.tooltip-text {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+
+	display: none;
+
+	box-sizing: border-box;
+	width: 256px;
+	margin-top: 15px;
+	padding: 20px 18px 23px 22px;
+
+	font-size: 16px;
+	line-height: 20px;
+	color: #ffffff;
+
+	background-color: #333333;
+	border-radius: 10px;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip-text::before {
+	position: absolute;
+	top: -9px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	width: 19px;
+	height: 9px;
+
+	background: url("../icons/stack.svg#modal-tooltip") no-repeat center / contain;
+
+	content: "";
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+	display: block;
 }
