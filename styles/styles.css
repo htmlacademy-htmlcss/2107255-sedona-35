@@ -22,6 +22,7 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
+	min-width: 1280px;
 	min-height: 100%;
 	margin: 0;
 
@@ -78,7 +79,6 @@ img {
 .button {
 	display: inline-block;
 	box-sizing: border-box;
-	height: 36px;
 	padding: 8px 34px;
 
 	font-family: inherit;
@@ -178,7 +178,6 @@ img {
 }
 
 .button-big {
-	height: 52px;
 	padding: 8px 50px;
 
 	font-size: 20px;
@@ -680,7 +679,7 @@ img {
 
 .subscribe-form-field {
 	flex-grow: 1;
-	height: 52px;
+	min-height: 52px;
 
 	font-weight: 400;
 
@@ -692,6 +691,8 @@ img {
 }
 
 .subscribe-form-button {
+	max-width: 300px;
+
 	border-radius: 0 4px 4px 0;
 }
 
@@ -847,10 +848,10 @@ img {
 .filter-input-label {
 	display: flex;
 	align-items: center;
-	width: max-content;
 }
 
 .filter-input-mark {
+	flex-shrink: 0;
 	width: 20px;
 	height: 20px;
 	margin-right: 16px;
@@ -1290,8 +1291,6 @@ img {
 }
 
 .hotel-raiting {
-	box-sizing: border-box;
-	height: 37px;
 	padding-top: 9px;
 
 	font-weight: 400;
@@ -1564,9 +1563,8 @@ img {
 
 .hotel-search-button {
 	grid-column: 1 / -1;
-	height: 60px;
 	margin-top: 48px;
-	padding: 0;
+	padding: 18px 50px;
 
 	font-family: inherit;
 	font-weight: 700;
